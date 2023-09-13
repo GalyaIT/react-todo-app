@@ -2,7 +2,7 @@ import React from "react";
 import { RiDeleteBinLine } from "react-icons/ri";
 import {FaRegEdit} from 'react-icons/fa';
 
-const TodoItem = ({ completed, id, title, toggleTodo, deleteTodo }) => {
+const TodoItem = ({ completed, id, title, toggleTodo, deleteTodo, editTodo, updatedTitle }) => {
   return (
     <li className={completed ? "checked" : "unchecked"}>
       <label>
@@ -14,7 +14,7 @@ const TodoItem = ({ completed, id, title, toggleTodo, deleteTodo }) => {
       </label>
       <span>{title} </span>
       <div className="icons">
-         <button onClick={() => deleteTodo(id)}>
+         <button onClick={() => editTodo(id, updatedTitle)}>
         <FaRegEdit color='white' />
       </button>
       <button onClick={() => deleteTodo(id)}>
