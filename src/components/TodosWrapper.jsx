@@ -5,47 +5,53 @@ import TodoList from './TodoList';
 
 const TodosWrapper = ({todos, setTodos}) => {
 
-  function addTodo(title) {
-    setTodos(currentTodos => {
-      return [
-        ...currentTodos,
-        { id:uuidv4(), title, completed: false },
-      ]
-    })
+
+
+  const addTodo=(title)=> {
+    setTodos([
+      ...todos,
+      { id:uuidv4(), title, completed: false, edited:false },
+    ]);   
+  }
+
+  const toggleTodo = (id)=>{
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );  
   }
 
 
-  function toggleTodo(id, completed) {
-    setTodos(currentTodos => {
-      return currentTodos.map(todo => {
-        if (todo.id === id) {
-          return { ...todo, completed }
-        }      
-        return todo
-      })
-    })
+const editTodo =(id)=>{
+  setTodos(
+    todos.map((todo)=>todo.id===id ?{
+...todo,edited:!todo.edited}: todo)
+  )
+}
+
+
+  const editTask =(title, id)=>{
+
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, title, edited: !todo.edited} : todo
+      )
+    );
   }
-  function editTodo(id, updatedTitle) {
-    setTodos(currentTodos => {
-      return currentTodos.map(todo => {
-        if (todo.id === id) {
-          return { ...todo, updatedTitle }
-        }      
-        return todo
-      })
-    })
-  }
-  function deleteTodo(id) {
-    setTodos(currentTodos => {
-      return currentTodos.filter(todo => todo.id !== id)
-    })
-  }
+
+const deleteTodo =(id)=>{
+  setTodos(
+    todos.filter(todo=>todo.id!==id)
+  )
+}
+
   return (
        <div className='todo__app-wrapper'>
          <h1 style={{color:"white", textAlign:"center"}}>What's the plan for today?</h1>
       <TodoForm onSubmit={addTodo}/> 
       <h3 style={{color:"white",textAlign:"center"}}>Todo List</h3>     
-      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} editTodo={editTodo}/>
+      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} editTodo={editTodo} editTask={editTask}/>
       </div>     
   )
 }
