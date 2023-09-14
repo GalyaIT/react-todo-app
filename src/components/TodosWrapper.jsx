@@ -48,9 +48,9 @@ const deleteTodo =(id)=>{
 
   return (
        <div className='todo__app-wrapper'>
-         <h1 style={{color:"white", textAlign:"center"}}>What's the plan for today?</h1>
+         <h1 style={{color:"white", textAlign:"center", marginBottom:"20px"}}>What's the plan for today?</h1>
       <TodoForm onSubmit={addTodo}/> 
-      <h3 style={{color:"white",textAlign:"center"}}>Todo List</h3>     
+      <h3 style={{color:"white",textAlign:"center",marginBottom:"20px", marginTop:"20px"}}>Todo List</h3>     
       <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} editTodo={editTodo} editTask={editTask}/>
       </div>     
   )

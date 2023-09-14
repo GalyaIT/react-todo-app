@@ -10,7 +10,7 @@
 
 .todo__app-wrapper {
   background-color: rgb(21, 16, 63);
-  width: 60%; 
+  width: 80%; 
   margin-top: 30px;
   padding: 4rem 2rem;
 }
@@ -18,16 +18,15 @@
 .todo__form {
   display: flex;
   justify-content: center; 
-  margin-bottom: 5px; 
+  margin-bottom: 10px; 
   border: 1px solid #9015f4;
 }
 
 .todo__form input {
   width: 100%;
   background-color: rgb(21, 16, 63);
-  line-height: 40px;
-  outline: none;
-  /* border: 1px solid #9015f4; */
+  line-height: 38px;
+  outline: none; 
   color: white;
   padding-left: 10px;
   font-size: 12px; 
@@ -43,7 +42,6 @@
   font-size: 12px;
   cursor: pointer;
   outline: none;
-  /* border:none; */
 }
 
 .list {
@@ -56,8 +54,8 @@
 .list li {
   display: flex;
   justify-content: space-between;
-  margin: 6px 0;
-  padding: 10px 5px;
+  margin: 10px 0;
+  padding: 10px 10px;
   border-radius: 5px;
   border: 1px solid #9015f4;
   color: white;
@@ -69,16 +67,19 @@
   accent-color: rgb(110 26 218 / 57%);
   width: 15px;
   height: 15px;
-  cursor: pointer;
+  cursor: pointer;  
 }
 
 .list li button {
   background-color: transparent;
-  padding: 0;
-  margin-left: 10px;
+  padding: 0; 
   border: none;
   font-size: 15px;
   cursor: pointer;
+}
+
+.icons button:nth-child(1){
+  padding-right: 5px;
 }
 
 .checked { 
@@ -99,7 +100,7 @@
 .list li span {
   display: block;
   width: calc(69% - 30px);
-  padding-left: 5px;
+  padding-left: 10px;
   margin-right: 5px;
   word-wrap: break-word;
   flex: 1;
@@ -120,6 +121,7 @@
 
   .list li span {
     width: calc(100% - 30px);
+    font-size: 14px;
   }
 }
 
@@ -135,9 +137,9 @@
   }
 
   .todo__form button {
-    font-size: 16px;
+    font-size: 18px;
   }
-
+ 
   .list li input {
     width: 20px;
     height: 20px;
@@ -148,10 +150,6 @@
     font-size: 18px;
     line-height: 40px;
     width: calc(100% - 30px);
-  }
-
-  .btn-danger {
-    font-size: 20px;
   }
 
   .icons svg {
