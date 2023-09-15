@@ -10,6 +10,7 @@ const TodoItem = ({completed, id, title, toggleTodo, deleteTodo, editTodo}) => {
   };
   useEffect(() => {
     document.body.style.overflow = value ? "hidden" : "unset";
+    document.body.style.height = value?"100%": "auto";
   }, [value]);
 
 

@@ -38,7 +38,7 @@
 }
 
 .todo__form button {
-  background-color: var(--bg-color-li);
+  background-color: var(--bg-color-form-btn);
   padding: 10px 15px;
   color: var(--input-color);
   font-size: 12px;
@@ -64,7 +64,12 @@
   font-size: 12px;
   align-items: center;
 }
-
+.icons{
+  display:flex;
+  justify-content: end;
+  width:45px;
+  margin-left: 10px;
+}
 .icons button {
   background-color: transparent;
   padding: 0;
@@ -102,8 +107,8 @@
 .checkbox span {
   display: block;
   width: calc(69% - 30px);
-  padding-left: 10px;
-  word-wrap: break-word;
+  padding-left: 10px;  
+  word-break: break-all;
   flex: 1;
   color: var(--span-color);
 }
@@ -120,6 +125,7 @@
   transition-duration: 0.3s;
   background-color: var(--check-bg-color);
   cursor: pointer;
+  border-radius: 0 !important;
 }
 .checkbox > input:checked {
   border: 1px solid transparent;
@@ -136,7 +142,9 @@
 
 .warning-wrapper {
   background-color: rgba(17, 16, 16, 0.536);
-  position: absolute;
+  position: fixed; 
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   right: 0;
@@ -144,7 +152,7 @@
   z-index: 999;
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .warning-box {
@@ -156,7 +164,7 @@
 }
 .warning-box p {
   margin-bottom: 20px;
-  color: black;
+  color: var(--warning-color);
 }
 .warning-box-buttons {
   display: flex;
@@ -168,6 +176,8 @@
   padding: 10px 0px;
   width: 80px;
   border: none;
+  box-shadow: 0px 4px 6px 0px rgba(109, 108, 108, 0.808);
+  border-radius: 5px;
   outline: none;
   cursor: pointer;
 }
@@ -179,7 +189,7 @@
   color: green;
 }
 @media only screen and (min-width: 450px) {
-  .list li span {
+  .checkbox span {
     width: calc(90% - 30px);
   }
 }
@@ -228,5 +238,8 @@
   .icons svg {
     width: 20px;
     height: 20px;
+  }
+  .warning-box {   
+    width: 40%;  
   }
 }

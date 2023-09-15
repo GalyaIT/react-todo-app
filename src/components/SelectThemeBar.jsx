@@ -4,7 +4,7 @@ import "./SelectThemeBar.css";
 const SelectThemeBar = () => {
   const [theme, setTheme] = useState(() => {
     const localTheme = localStorage.getItem("key_name");
-    if (localTheme === "") return "purple";
+    if (localTheme === null) return "purple";
     return localTheme;
   });
 
@@ -21,10 +21,10 @@ const SelectThemeBar = () => {
         setTheme("light-theme");
         localStorage.setItem("key_name", "light-theme");
         break;
-      // case "hero-btn2":
-      //   setTheme("dark-theme");
-      //   localStorage.setItem("key_name", "dark-theme");
-      //   break;
+      case "hero-btn2":
+        setTheme("dark-theme");
+        localStorage.setItem("key_name", "dark-theme");
+        break;
       case "hero-btn3":
         setTheme("purple");
         localStorage.setItem("key_name", "purple");
@@ -51,7 +51,7 @@ const SelectThemeBar = () => {
       <h5 className='select-theme-heading'>Select a Theme from below</h5>
       <div className='select-theme-div'>
         <button id='hero-btn1' onClick={handleClick}></button>
-        {/* <button id='hero-btn2' onClick={handleClick}></button> */}
+        <button id='hero-btn2' onClick={handleClick}></button>
         <button id='hero-btn3' onClick={handleClick}></button>
         {/* <button id='hero-btn4' onClick={handleClick}></button>
         <button id='hero-btn5' onClick={handleClick}></button>
