@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FaRegEdit } from "react-icons/fa";
 
@@ -8,6 +8,10 @@ const TodoItem = ({completed, id, title, toggleTodo, deleteTodo, editTodo}) => {
   const handleDelete = () => {
     setValue(!value);
   };
+  useEffect(() => {
+    document.body.style.overflow = value ? "hidden" : "unset";
+  }, [value]);
+
 
   return (
     <>
