@@ -1,29 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import { RiDeleteBinLine } from "react-icons/ri";
-import {FaRegEdit} from 'react-icons/fa';
+import { FaRegEdit } from "react-icons/fa";
 
-const TodoItem = ({ completed, id, title, toggleTodo, deleteTodo, editTodo}) => {
-  
+const TodoItem = ({completed, id, title, toggleTodo, deleteTodo, editTodo}) => {
+  const [value, setValue] = useState(false);
+
+  const handleDelete = () => {
+    setValue(!value);
+  };
+
   return (
-    <li className={completed ? "checked" : "unchecked"}>
-      <label>
-        <input
-          type='checkbox'
-          checked={completed}
-          onChange={(e) => toggleTodo(id)}
-        />      
-      </label>
-      <span>{title} </span>
-      <div className="icons">
-         <button onClick={() => editTodo(id)}>
-        <FaRegEdit color='white' />
-      </button>
-      <button onClick={() => deleteTodo(id)}>
-        <RiDeleteBinLine color='white' />
-      </button>
-      </div>
-     
-    </li>
+    <>
+      <li className={completed ? "checked fade" : "unchecked fade"}>
+        <label className='checkbox'>
+          <input
+            type='checkbox'
+            checked={completed}
+            onChange={(e) => toggleTodo(id)}
+          />
+          <span>{title} </span>
+        </label>
+
+        <div className='icons'>
+          <button onClick={() => editTodo(id)}>
+            <FaRegEdit />
+          </button>
+          <button onClick={handleDelete}>
+            <RiDeleteBinLine />
+          </button>
+        </div>
+      </li>
+      {value && (
+        <div className='warning-wrapper'>
+          <div className='warning-box'>
+            <p>Are you sure want to delete?</p>
+            <div className='warning-box-buttons'>
+              <button onClick={() => deleteTodo(id)}>Yes</button>
+              <button onClick={handleDelete}>No</button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

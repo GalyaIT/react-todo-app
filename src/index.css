@@ -14,7 +14,83 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+:root {
+  --bg-color: #fff; 
+  --headings-color: #000000;
+  --bg-color-elements: #000000;
+}
+body[data-theme="light-theme"] {
+  --bg-color: #dfddda;
+  --bg-color-elements: #c9c9c9;
+  --headings-color: #000000;  
+  --bg-color-li:#aca59e;
+  --border-color:#606061;
+  --bg-color-checked:rgb(138, 134, 129);
+  --checkedspan-color:#cccccc;
+  --input-color:#000000;
+  --span-color: #000000;
+  --icon1-color: #117029;
+  --icon2-color: #a31919;
+  --check-color:#124b20;
+  --check-border-color:#333030;
+  --check-bg-color:#ffffff;
+}
+body[data-theme="dark-theme"] {
+  --bg-color: #000000;
+  --headings-color: #fff;
+  --bg-color-elements: #fff;
+}
+body[data-theme="purple"] {
+  --bg-color: rgb(129, 78, 177);
+  --background-linear: linear-gradient(90deg, rgba(101, 51, 167, 0.87) 14%, rgb(94, 15, 163) 47%, rgba(77, 32, 114, 0.87) 90%);
+  --bg-color-elements:rgb(21, 16, 63);
+  --headings-color: #fff; 
+  --bg-color-li:#6b19ad;
+  --border-color:#9015f4;
+  --bg-color-checked:rgb(125 26 218 / 57%); 
+  --checkedspan-color:#9879af;
+  --input-color:#ffffff;
+  --icon1-color: #ffffff;
+  --icon2-color: #ffffff; 
+  --span-color: #ffffff;
+  --check-color:#ffffff;
+  /* --check-border-color:#ffffff; */
+  --check-bg-color:#ffffff;
+}
+
+body[data-theme="sharp-theme"] {
+  --bg-color: #ff7777;
+  --headings-color: #a2416b;
+  --bg-color-elements: #852747;
+}
+body[data-theme="sea-theme"] {
+  --bg-color: #ffe699;
+  --headings-color: #96ceb4;
+  --bg-color-elements: #ff9292;
+}
+body[data-theme="blue-theme"] {
+  --bg-color: #99dfff;
+  --headings-color: #96ceb4;
+  --bg-color-elements: #ff9292;
+}
+body {
+  background: var(--bg-color) !important;
+}
+
+.fade {
+  -webkit-animation: fade 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: fade 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes fade {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

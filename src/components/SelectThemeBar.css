@@ -1,0 +1,42 @@
+.todo-colortheme{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .select-theme-heading{
+    color:var(--headings-color);
+  }
+  .select-theme-div{
+    align-self: center;   
+  }
+  .select-theme-div button{
+  width:20px;
+  height:20px;
+  border-radius: 50%;
+  margin: 20px 5px 5px 5px;
+  cursor: pointer;
+  }
+  #hero-btn1{
+    background-color: white;
+    border: 1px solid grey;
+  }
+  #hero-btn2{
+    background-color: black;
+    border: 1px solid grey;
+  }
+  #hero-btn3{
+    background-color: rgb(86, 14, 153);
+    border: 1px solid grey;
+  }
+  #hero-btn4{
+    background-color: #ff7777;
+    border: 1px solid grey;
+  }
+  #hero-btn5{
+    background-color: #ffe699;
+    border: 1px solid grey;
+  }
+  #hero-btn6{
+    background-color: #99dfff;
+    border: 1px solid grey;
+  }

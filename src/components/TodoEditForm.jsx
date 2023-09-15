@@ -10,7 +10,7 @@ const handleSubmit=(e)=>{
 }  
 
   return (
-    <form onSubmit={handleSubmit} className='todo__form'>
+    <form onSubmit={handleSubmit} className='todo__form fade'>
     <input
       defaultValue={newItem}    
       onChange={(e) => setNewItem(e.target.value)}
