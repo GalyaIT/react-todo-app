@@ -37,7 +37,7 @@ const TodoItem = ({completed, id, title, toggleTodo, deleteTodo, editTodo}) => {
       </li>
       {value && (
         <div className='warning-wrapper'>
-          <div className='warning-box fade'>
+          <div className='warning-box slide-bottom'>
             <p>Are you sure want to delete?</p>
             <div className='warning-box-buttons'>
               <button onClick={() => deleteTodo(id)}>Yes</button>

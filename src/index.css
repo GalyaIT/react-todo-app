@@ -163,6 +163,10 @@ body {
   -webkit-animation: fade 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: fade 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+.slide-bottom {
+  -webkit-animation: slide-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 
 @keyframes fade {
   0% {
@@ -171,4 +175,17 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-15%);
+    transform: translateY(-15%);
+    
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);          
+       
+    }   
 }
