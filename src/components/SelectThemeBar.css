@@ -17,7 +17,7 @@
   cursor: pointer;
   }
   #hero-btn1{
-    background-color: white;
+    background-color: #c9c9c9;
     border: 1px solid grey;
   }
   #hero-btn2{
@@ -29,14 +29,14 @@
     border: 1px solid grey;
   }
   #hero-btn4{
-    background-color: #ff7777;
+    background-color: #640e15;
     border: 1px solid grey;
   }
   #hero-btn5{
-    background-color: #ffe699;
+    background-color: #e7972e;
     border: 1px solid grey;
   }
   #hero-btn6{
-    background-color: #99dfff;
+    background-color: #132b47;
     border: 1px solid grey;
   }

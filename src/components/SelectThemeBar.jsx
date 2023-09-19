@@ -29,18 +29,18 @@ const SelectThemeBar = () => {
         setTheme("purple");
         localStorage.setItem("key_name", "purple");
         break;
-      // case "hero-btn4":
-      //   setTheme("sharp-theme");
-      //   localStorage.setItem("key_name", "sharp-theme");
-      //   break;
-      // case "hero-btn5":
-      //   setTheme("sea-theme");
-      //   localStorage.setItem("key_name", "sea-theme");
-      //   break;
-      // case "hero-btn6":
-      //   setTheme("blue-theme");
-      //   localStorage.setItem("key_name", "blue-theme");
-      //   break;
+      case "hero-btn4":
+        setTheme("sharp-theme");
+        localStorage.setItem("key_name", "sharp-theme");
+        break;
+      case "hero-btn5":
+        setTheme("sea-theme");
+        localStorage.setItem("key_name", "sea-theme");
+        break;
+      case "hero-btn6":
+        setTheme("blue-theme");
+        localStorage.setItem("key_name", "blue-theme");
+        break;
       default:
         break;
     }
@@ -53,9 +53,9 @@ const SelectThemeBar = () => {
         <button id='hero-btn1' onClick={handleClick}></button>
         <button id='hero-btn2' onClick={handleClick}></button>
         <button id='hero-btn3' onClick={handleClick}></button>
-        {/* <button id='hero-btn4' onClick={handleClick}></button>
+        <button id='hero-btn4' onClick={handleClick}></button>
         <button id='hero-btn5' onClick={handleClick}></button>
-        <button id='hero-btn6' onClick={handleClick}></button> */}
+        <button id='hero-btn6' onClick={handleClick}></button>
       </div>
     </div>
   );

@@ -64,17 +64,17 @@ body[data-theme="light-theme"] {
   --warning-color:#eb2323;
 }
 body[data-theme="dark-theme"] {
-  --bg-color: #000000;
+  --bg-color: #333030;
   --headings-color: #fff;
-  --bg-color-elements: #333030;
+  --bg-color-elements:#000000;
   --bg-color-form-btn: #1c1c1d;
   --bg-color-li:#161616;
   --border-color:#252121;
   --bg-color-checked:rgba(95, 87, 92, 0.979); 
   --checkedspan-color:#908e92;
   --input-color:#ffffff;
-  --icon1-color: #ffffff;
-  --icon2-color: #ffffff; 
+  --icon1-color: #117029;
+  --icon2-color: #a31919;
   --span-color: #ffffff;
   --check-color:#ffffff;
   --check-border-color:#ffffff;
@@ -102,19 +102,58 @@ body[data-theme="purple"] {
 }
 
 body[data-theme="sharp-theme"] {
-  --bg-color: #ff7777;
-  --headings-color: #a2416b;
-  --bg-color-elements: #852747;
+  --bg-color: #e2c4c4;
+  --headings-color: #ffffff;
+  --bg-color-elements: #640e15;
+  --bg-color-form-btn: #4f0a0a;
+  --bg-color-li:#4f0a0a;
+  --bg-color-checked:rgba(163, 72, 85, 0.57); 
+  --checkedspan-color:#908e92;
+  --border-color:#e2c4c4;
+  --input-color:#ffffff;
+  --icon1-color: #117029;
+  --icon2-color: #a31919; 
+  --span-color: #ffffff;
+  --check-color:#ffffff;
+  --check-border-color:#ffffff;
+  --check-bg-color:#ffffff;
+  --warning-color:#4f0a0a;
 }
 body[data-theme="sea-theme"] {
-  --bg-color: #ffe699;
-  --headings-color: #96ceb4;
-  --bg-color-elements: #ff9292;
+  --bg-color: #efd57f;
+  --headings-color: #301e09;
+  --bg-color-elements: #e7972e;
+  --bg-color-form-btn: #e2691ad1;
+  --bg-color-li:#e2691ad1;
+  --bg-color-checked:rgba(240, 228, 126, 0.57); 
+  --checkedspan-color:#535153;
+  --border-color:#e2691ad1;
+  --input-color:#000000;
+  --icon1-color: #117029;
+  --icon2-color: #a31919;
+  --span-color: #000000;
+  --check-color:#113807;
+  --check-border-color:#ffffff;
+  --check-bg-color:#ffffff;
+  --warning-color:#e2691ad1;
 }
 body[data-theme="blue-theme"] {
-  --bg-color: #99dfff;
-  --headings-color: #96ceb4;
-  --bg-color-elements: #ff9292;
+  --bg-color: #8196a0;
+  --headings-color: #c05803;
+  --bg-color-elements: #132b47;
+  --bg-color-form-btn: #041121;
+  --bg-color-li:#041121;
+  --bg-color-checked:#0b1d33d2; 
+  --checkedspan-color:#758288;
+  --border-color:#041121;
+  --input-color:#ffffff;
+  --icon1-color: #ffffff;
+  --icon2-color: #ffffff;
+  --span-color: #ffffff;
+  --check-color:#ffffff;
+  --check-border-color:#ffffff;
+  --check-bg-color:#ffffff;
+  --warning-color:#e2691ad1;
 }
 body {
   background: var(--bg-color) !important;
