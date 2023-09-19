@@ -14,32 +14,25 @@ const SelectThemeBar = () => {
   }, [theme]);
 
   const handleClick = (e) => {
-    let element = e.currentTarget.id;
-    console.log(element);
+    let element = e.currentTarget.id; 
     switch (element) {
       case "hero-btn1":
-        setTheme("light-theme");
-        localStorage.setItem("key_name", "light-theme");
+        setTheme("light-theme");     
         break;
       case "hero-btn2":
-        setTheme("dark-theme");
-        localStorage.setItem("key_name", "dark-theme");
+        setTheme("dark-theme");       
         break;
       case "hero-btn3":
-        setTheme("purple");
-        localStorage.setItem("key_name", "purple");
+        setTheme("purple");      
         break;
       case "hero-btn4":
-        setTheme("sharp-theme");
-        localStorage.setItem("key_name", "sharp-theme");
+        setTheme("sharp-theme");       
         break;
       case "hero-btn5":
-        setTheme("sea-theme");
-        localStorage.setItem("key_name", "sea-theme");
+        setTheme("sea-theme");      
         break;
       case "hero-btn6":
-        setTheme("blue-theme");
-        localStorage.setItem("key_name", "blue-theme");
+        setTheme("blue-theme");       
         break;
       default:
         break;
